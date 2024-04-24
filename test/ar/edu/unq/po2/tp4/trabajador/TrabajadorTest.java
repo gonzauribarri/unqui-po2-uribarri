@@ -1,4 +1,4 @@
-package unq.po2.tp4.trabajador;
+package ar.edu.unq.po2.tp4.trabajador;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
