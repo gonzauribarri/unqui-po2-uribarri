@@ -18,6 +18,10 @@ public class Cliente {
 		this.setSueldoNetoAnual();
 	}
 
+	private void setEdad(int edad) {
+		this.edad = edad;
+	}
+
 	private void setSueldoNetoAnual() {
 		this.sueldoNetoAnual += this.getSueldoNetoMensual() * 12;
 	}
@@ -32,10 +36,6 @@ public class Cliente {
 	
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
-	}
-	
-	private void setEdad(int edad) {
-		this.setEdad(edad);
 	}
 	
 	public void setSueldoNetoMensual(double sueldoNetoMensual) {
