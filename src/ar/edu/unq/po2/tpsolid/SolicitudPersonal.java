@@ -9,6 +9,7 @@ public class SolicitudPersonal extends Solicitud {
 	}
 	
 	public boolean esAceptable(){
-		return false;
+		return (this.getCliente().getSueldoNetoAnual() >= 15000) 
+				& (this.getCuotaMensual() <= this.getCliente().getSueldoNetoMensual() * 1.70);
 	}
 }

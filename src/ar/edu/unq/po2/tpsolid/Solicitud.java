@@ -1,28 +1,12 @@
 package ar.edu.unq.po2.tpsolid;
 
-public class Solicitud {
+
+
+public abstract class Solicitud {
 	
 	protected Cliente cliente;
 	protected double montoSolicitado;
 	protected int plazo;
-	
-	public Solicitud(Cliente cliente, double montoSolicitado, int plazo) {
-		this.setCliente(cliente);
-		this.setMontoSolicitado(montoSolicitado);
-		this.setPlazo(plazo);
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-
-	public void setMontoSolicitado(double montoSolicitado) {
-		this.montoSolicitado = montoSolicitado;
-	}
-	
-	public void setPlazo(int plazo) {
-		this.plazo = plazo;
-	}
 	
 	public Cliente getCliente() {
 		return cliente;
@@ -35,4 +19,10 @@ public class Solicitud {
 	public int getPlazo() {
 		return plazo;
 	}
+	
+	public double getCuotaMensual() {
+		return this.getMontoSolicitado() / this.getPlazo();
+	}
+	
+	public abstract boolean esAceptable();
 }
